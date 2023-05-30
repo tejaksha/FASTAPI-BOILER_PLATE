@@ -1,9 +1,9 @@
 mkdir myapp 
 cd myapp 
-mkdir app tests
+mkdir app tests docs
 touch .env README.md  requirements.txt
 cd app
-mkdir api info models services 
+mkdir api info models services utils
 touch __init__.py database.py main.py 
 cd api 
 touch __init__.py
@@ -16,7 +16,11 @@ touch __init__.py
 cd ..
 cd services
 touch __init__.py
+cd ..
+cd utils
+touch __init__.py 
 cd ../..
+
 cat << EOF >> README.md
 Command to Run the FastAPI
 
@@ -43,5 +47,3 @@ fastapi
 uvicorn
 load_dotenv
 EOF
-
-
